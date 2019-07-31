@@ -1,0 +1,34 @@
+<div class="col-lg-8">
+
+    <hr>
+    <p style="text-align: center">Tên Dự Án : {{loadIssues.project.name | uppercase}}</p>
+    <hr>
+    <p class="lead">Tiêu Đề: {{loadIssues.title | uppercase}}</p>
+
+    <blockquote class="blockquote">
+        <p class="mb-0">NỘI DUNG ISSUES :  {{loadIssues.actionCode}}</p>
+    </blockquote>
+    <hr>
+
+    <!-- Comments Form -->
+    <div class="card my-4">
+        <h5 class="card-header">Comment:</h5>
+        <div class="card-body">
+            <form ng-submit="saveComment(IssuesComment)">
+                <div class="form-group">
+                    <textarea ng-model="IssuesComment.contentIssuse" class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng Comments</button>
+                <input class="btn btn-primary" type="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+
+    <!-- Single Comment -->
+    <div class="media mb-4">
+        <div class="media-body">
+            <h5 class="mt-0">UserName</h5><p>Thời gian đăng</p>
+            -<p>Nội dung comment</p>-
+        </div>
+    </div>
+</div>

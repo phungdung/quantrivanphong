@@ -1,0 +1,25 @@
+<div class="card-header">
+    <i class="fas fa-table"></i> Thêm mới dự án
+</div>
+<div class="card-body">
+    <form ng-submit="insertIssues(Issues)">
+        <label>Tên Dự Án</label>
+        <select ng-model="Issues.projectId" autofocus="autofocus"
+                required="required">
+            <option value="">==> Trạng Thái</option>
+            <option ng-repeat="project in listProject" value="{{project.id}}">{{project.name}}</option>
+        </select><br/>
+        <label>Tiêu đề</label>
+        <input type="text" style="height: 32px" ng-model="Issues.title" id="title" placeholder="Tiêu Đề"
+               required="required"><br/>
+        <label>Nội Dung</label>
+        <input type="text" style="height: 32px" ng-model="Issues.actionCode" id="actionCode" placeholder="Nội dung issues"
+               required="required"><br/>
+        <div>
+            <h1>{{view.message}}</h1>
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+            <button type="button" ui-sref="issues">Back</button>
+        </div>
+    </form>
+</div>

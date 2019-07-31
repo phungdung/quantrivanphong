@@ -1,0 +1,48 @@
+<div class="card mb-3">
+
+    <div class="card-header" ng-controller="loadGroupProjectByProjectId">
+
+        <i class="fas fa-table" ></i> Thành Viên Trong Nhóm Dự Án <div ng-model="ProjectName.name"></div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" >
+
+            <input type="text" ng-model="search" placeholder="Search" style="margin-bottom: 10px; height: 32px">
+            <table class="table table-bordered" id="dataTable" width="100%"
+                   cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tài khoản</th>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Chức Vụ</th>
+                    <th>Ngày Vào</th>
+                    <th>Ngày Ra</th>
+                    <th>Thao Tác</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="gruopProject in pageGroupListProject">
+                    <td>{{ gruopProject.employeeDTO.username }}</td>
+                    <td>{{ gruopProject.employeeDTO.firstName }}</td>
+                    <td>{{ gruopProject.employeeDTO.email}}</td>
+                    <td>{{ gruopProject.position}}</td>
+                    <td>{{ gruopProject.joinDate | date:"dd/MM/yyyy" }}</td>
+                    <td>{{ gruopProject.outDate | date:"dd/MM/yyyy" }}</td>
+                    <td>
+                        <a ui-sref="editEmployeeProject({ID: gruopProject.id})" class="btn btn-warning btn-circle btn-sm">
+                            Cập Nhật </a>
+                        <a class="btn btn-danger btn-circle btn-sm" ng-controller="deleteEmployeeProject"
+                           data-ng-click="deleteEmployeeProject(gruopProject)">Xóa Thành Viên</a>
+                </tr>
+                </tbody>
+            </table>
+            <a ui-sref="addEmployeeProject" class="btn btn-primary btn-circle btn-sm" style="margin-bottom: 10px;"> Thêm thành viên</a>
+            <a ui-sref="project" class="btn btn-primary btn-circle btn-sm" style="margin-bottom: 10px;"> Back</a>
+        </div>
+    </div>
+    <div data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true">
+    </div>
+</div>

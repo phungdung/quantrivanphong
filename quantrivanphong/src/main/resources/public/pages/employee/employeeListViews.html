@@ -1,0 +1,45 @@
+<div class="card mb-3">
+
+    <div class="card-header">
+        <i class="fas fa-table"></i> Danh Sách Nhân Viên
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" >
+            <input type="text" ng-model="search" placeholder="Search" style="margin-bottom: 10px;height: 32px;">
+            <table class="table table-bordered" id="dataTable" width="100%"
+                   cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Họ và Tên</th>
+                    <th>Tên tài khoản</th>
+                    <th>Số điện thoại</th>
+                    <th>email</th>
+                    <th>Trạng Thái</th>
+                    <th>Thao Tác</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="employee in pageEmployee|filter:search">
+                    <td>{{ employee.firstName }}</td>
+                    <td>{{ employee.username }}</td>
+                    <td>{{ employee.phoneNumber }}</td>
+                    <td>{{ employee.emailAddress}}</td>
+                    <td>
+                        <span ng-if="employee.status == 0" style="color: #34ce57">Đang làm việc</span>
+                        <span ng-if="employee.status == 1"  style="color: #0e90d2">Đã nghỉ làm</span>
+                    </td>
+                    <td>
+                        <a ui-sref="editproject({ID: project.id})" class="btn btn-warning btn-circle btn-sm">
+                        Sửa </a>
+                        <a class="btn btn-danger btn-circle btn-sm" ng-controller="deleteEmployee"
+                           data-ng-click="deleteEmployee(employee)">Xóa</a>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true">
+    </div>
+</div>

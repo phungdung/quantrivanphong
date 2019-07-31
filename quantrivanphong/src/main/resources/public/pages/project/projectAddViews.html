@@ -1,0 +1,23 @@
+<div class="card-header">
+    <i class="fas fa-table"></i> Thêm mới dự án
+</div>
+<div class="card-body">
+    <form ng-controller="insertProject" ng-submit="insert_project()">
+        <label>Tên Dự Án</label>
+        <input type="text" style="height: 32px" ng-model="project.name" id="name" placeholder="Tên Dự Án"
+               required="required" style="height: 20px;"><br/>
+        <label>Mô tả ngắn</label>
+        <input type="text" style="height: 32px" ng-model="project.descriptions" id="descriptions" placeholder="Mô tả ngắn"
+               required="required"><br/>
+        <label>Ngày bắt đầu</label>
+        <input type="date" style="height: 32px" ng-model="project.startDate" id="startDate" placeholder="Ngày Bắt Đầu" required="required"><br/>
+        <label>Ngày kết thúc</label>
+        <input type="date" style="height: 32px" ng-model="project.endDate" id="endDate" placeholder="nick skype" required="required"><br/>
+        <div>
+            <h1>{{view.message}}</h1>
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+            <button type="button" ui-sref="project">Back</button>
+        </div>
+    </form>
+</div>

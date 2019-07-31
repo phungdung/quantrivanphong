@@ -1,0 +1,45 @@
+<div class="card mb-3">
+
+    <div class="card-header">
+        <i class="fas fa-table"></i> Danh Sách Issue
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <input type="text" ng-model="search" placeholder="Search" style="margin-bottom: 10px;height: 32px;">
+            <table class="table table-bordered" id="dataTable" width="100%"
+                   cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tên Dự Án</th>
+                    <th>Issue</th>
+                    <th>Ngày Tạo</th>
+                    <th>Trạng Thái</th>
+                    <th>Thao Tác</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="issue in pageListIssues|filter:search">
+                    <td>{{ issue.project.name }}</td>
+                    <td>{{ issue.title }}</td>
+                    <td>{{ issue.startDate | date:"dd/MM/yyyy" }}</td>
+                    <td>
+                        <span ng-if="issue.status == 0" style="color: #34ce57">Đang fix</span>
+                        <span ng-if="issue.status == 1" style="color: #0e90d2">Đã fix xong</span>
+                    </td>
+                    <td><a ui-sref="IssuesComment({IssuesId : issue.id})" class="btn btn-info btn-circle btn-sm">
+                        Chi Tiết </a>
+                        <a ng-click="updateIssues(issue)" class="btn btn-warning btn-circle btn-sm">
+                            Cập nhật Trạng Thái </a>
+                        <a class="btn btn-danger btn-circle btn-sm" ng-controller="IssuesDeleteController"
+                           data-ng-click="IssuesDelete(issue)">Xóa</a>
+                </tr>
+                </tbody>
+            </table>
+            <a ui-sref="addIssues" class="btn btn-primary btn-circle btn-sm" style="margin-bottom: 10px;"> Thêm Issue Mới</a>
+        </div>
+    </div>
+    <div data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true">
+    </div>
+</div>

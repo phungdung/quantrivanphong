@@ -1,0 +1,22 @@
+<div class="card card-login mx-auto mt-5">
+    <div class="card-header" style="text-align: center">Đăng Nhập Hệ Thống</div>
+    <div class="card-body">
+        <form ng-submit="loginQTVP(login)">
+            <label>Tên Đăng Nhập</label>
+            <input type="text" style="height: 35px" id="username" ng-model="login.username" class="form-control" placeholder="Tên Đăng Nhập"
+                   autofocus="autofocus" >
+            <label>Mật Khẩu</label>
+            <input type="password" style="height: 35px" id="inputPassword" ng-model="login.password" class="form-control" placeholder="Mật Khẩu">
+            <input class="btn btn-primary btn-block" type="submit" value="Đăng Nhập"/>
+        </form>
+        <h4 style="text-align: center;color: blue">{{view.message}}</h4>
+        <div ng-repeat="error in errors">
+            <h4 style="text-align: center;color: red">{{error}}</h4>
+        </div>
+        <div class="text-center">
+            <a class="d-block small mt-3" ui-sref="home-page">Trang Chủ</a>
+            <a class="d-block small" ui-sref="register">Đăng Ký</a>
+            <a class="d-block small" ui-sref="forgot-password">Lấy Lại Mật Khẩu?</a>
+        </div>
+    </div>
+</div>

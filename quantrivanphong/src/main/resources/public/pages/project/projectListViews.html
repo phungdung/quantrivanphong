@@ -1,0 +1,49 @@
+<div class="card mb-3">
+
+    <div class="card-header">
+        <i class="fas fa-table"></i> Danh Sách Dự Án
+    </div>
+    <div class="card-body">
+        <div class="table-responsive" >
+            <input type="text" ng-model="search" placeholder="Search" style="margin-bottom: 10px;height: 32px;">
+            <table class="table table-bordered" id="dataTable" width="100%"
+                   cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Tên Dự Án</th>
+                    <th>Mô tả ngắn</th>
+                    <th>Ngày bắt đầu</th>
+                    <th>Hạn giao</th>
+                    <th>Trạng Thái</th>
+                    <th>Thao Tác</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="project in pageListProject|filter:search">
+                    <td>{{ project.name }}</td>
+                    <td>{{ project.descriptions }}</td>
+                    <td>{{ project.startDate | date:"dd/MM/yyyy" }}</td>
+                    <td>{{ project.endDate | date:"dd/MM/yyyy" }}</td>
+                    <td>
+                        <span ng-if="project.status == 0" style="color: #34ce57">Dự Kiến</span>
+                        <span ng-if="project.status == 1"  style="color: #0e90d2">Đang Tiến Hành</span>
+                        <span ng-if="project.status == 2" style="color: #b21f2d" >Hoàn Thành</span>
+                    </td>
+                    <td><a ui-sref="groupProjectByProjectId({ID: project.id})" class="btn btn-info btn-circle btn-sm">
+                        Chi Tiết Nhóm </a>
+                        <a ui-sref="editproject({ID: project.id})" class="btn btn-warning btn-circle btn-sm">
+                        Sửa </a>
+                        <a class="btn btn-danger btn-circle btn-sm" ng-controller="deleteProject"
+                           data-ng-click="deleteProject(project.id)">Xóa</a>
+                </tr>
+                </tbody>
+            </table>
+            <a ui-sref="addproject" class="btn btn-primary btn-circle btn-sm" style="margin-bottom: 10px;"> Thêm Dự Án Mới</a>
+        </div>
+    </div>
+<!--    <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="getProject(page)"></pager-directive>-->
+    <div data-pagination="" data-num-pages="numPages()"
+         data-current-page="currentPage" data-max-size="maxSize"
+         data-boundary-links="true">
+    </div>
+</div>

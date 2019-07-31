@@ -1,0 +1,29 @@
+<div class="card-header">
+    <i class="fas fa-table"></i> Sửa Dự Án
+</div>
+<div class="card-body">
+    <form ng-controller="updateProject" ng-submit="updateProject(project)" name="formProject">
+        <label>Tên Dự Án</label>
+        <input type="text" style="height: 32px" ng-model="project.name" id="name"
+               placeholder="Tên Dự Án"
+               required="required" autofocus="autofocus" name="txtName"><br/>
+        <label>Mô tả ngắn</label>
+        <input type="text" style="height: 32px" ng-model="project.descriptions" id="descriptions"
+               placeholder="Mô tả ngắn"
+               required="required" name="txtDescriptions"><br/>
+        <select ng-model="project.status" autofocus="autofocus"
+                required="required">
+            <option value="">==> Trạng Thái</option>
+            <option value="0">Dự Kiến</option>
+            <option value="1">Đang Tiến Hành</option>
+            <option value="2">Đã Hoàn Thành</option>
+        </select><br/>
+        <input type="hidden" ng-model="project.id" id="id"><br/>
+        <div>
+            <h1>{{view.message}}</h1>
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+            <button type="button" ui-sref="project">Back</button>
+        </div>
+    </form>
+</div>

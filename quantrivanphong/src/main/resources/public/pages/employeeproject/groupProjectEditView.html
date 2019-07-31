@@ -1,0 +1,26 @@
+<div class="card-header">
+    <i class="fas fa-table"></i> Cập nhật chức vụ của nhân viên trong nhóm
+</div>
+<div class="card-body">
+    <form ng-controller="updateGroutpProject" ng-submit="updatePositionProject(gruopProject)" name="formProject">
+        <input type="hidden" ng-model="gruopProject.id" id="id"><br/>
+        <input type="hidden" ng-model="gruopProject.projectDTO.id" id="idProject"><br/>
+        <label>Tài khoản nhân viên</label>
+        <input type="text" style="height: 32px" ng-model="gruopProject.employeeDTO.username" id="descriptions"
+               placeholder="Tài khoản nhân viên"
+               ng-disabled="true"><br/>
+        <label>Chức Vụ</label><br/>
+        <select ng-model="gruopProject.position" autofocus="autofocus"
+                required="required">
+            <option value="">==> Chức Vụ</option>
+            <option value="TeamLead">TeamLead</option>
+            <option value="Member">Member</option>
+        </select><br/>
+        <div>
+            <h1>{{view.message}}</h1>
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+            <button type="button" ui-sref="groupProjectByProjectId({ID: gruopProject.projectDTO.id})">Back</button>
+        </div>
+    </form>
+</div>

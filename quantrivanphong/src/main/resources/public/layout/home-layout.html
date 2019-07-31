@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <a class="navbar-brand mr-1" ui-sref="home-page">Trang Chủ</a>
+<!--    <a class="navbar-brand mr-1" ui-sref="admin-home" style="margin-left: 40%">Trang Quản Trị</a>-->
+
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    </form>
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link" ui-sref="login">Đăng Nhập</a>
+        </li>
+    </ul>
+
+</nav>
+<div class="container-fluid">
+    <!-- Content  -->
+    <div ui-view="content">
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Ps: Phùng Văn Dung</p>
+    </div>
+    <!-- /.container -->
+</footer>

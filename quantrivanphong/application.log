@@ -1,0 +1,47 @@
+2019-06-22 07:44:30 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-06-22 07:47:57 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-06-27 10:25:54 INFO  ProjectBussinessImpl:110 - deleteProjectById
+2019-06-27 15:08:29 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:08:29 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:09:08 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:09:08 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:09:19 INFO  EmployeeProjectBussinessImpl:58 - saveEmployeeProject
+2019-06-27 15:09:19 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:09:19 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:10:52 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:10:52 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:11:04 INFO  EmployeeProjectBussinessImpl:88 - updateEmployeeProject
+2019-06-27 15:11:04 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:11:04 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:11:10 INFO  EmployeeProjectBussinessImpl:88 - updateEmployeeProject
+2019-06-27 15:11:10 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:11:10 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:12:03 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:12:03 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:12:12 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:12:12 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:14:23 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-27 15:14:23 INFO  EmployeeProjectBussinessImpl:36 - getGroupByProjectId
+2019-06-28 11:47:03 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 11:47:05 INFO  EmployeeBussinessImpl:49 - Lỗi update nhân viêncould not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2019-06-28 13:41:56 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 13:41:58 INFO  EmployeeBussinessImpl:49 - Lỗi update nhân viêncould not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2019-06-28 15:38:12 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:38:24 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:44:11 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:45:21 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:46:17 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:46:22 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:53:25 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 15:53:34 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 16:03:14 INFO  ProjectBussinessImpl:110 - deleteProjectById
+2019-06-28 16:15:08 INFO  EmployeeBussinessImpl:28 - Sửa thông tin nhân viên
+2019-06-28 16:51:59 INFO  ProjectBussinessImpl:111 - deleteProjectById
+2019-06-28 16:52:08 INFO  ProjectBussinessImpl:111 - deleteProjectById
+2019-07-01 11:35:56 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-07-01 11:36:53 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-07-01 11:39:21 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-07-01 11:39:27 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-07-01 11:43:43 INFO  RegisterBussinessImpl:39 - Lỗi đăng ký: Could not copy property 'id' from source to target; nested exception is java.lang.IllegalArgumentException
+2019-07-01 11:57:19 INFO  EmployeeBussinessImpl:57 - Xóa thông tin nhân viên
+2019-07-02 10:22:48 INFO  EmployeeBussinessImpl:57 - Xóa thông tin nhân viên

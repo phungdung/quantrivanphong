@@ -1,0 +1,28 @@
+<div class="card-header">
+    <i class="fas fa-table"></i> Thành thành viên mới của dự án
+</div>
+<div class="card-body">
+    <form ng-controller="insertEmployeeProject" ng-submit="insert_employeeproject(employeeProject)" name="eproject">
+        <label>Tên Dự Án</label>
+        <select ng-model="employeeProject.projectId" autofocus="autofocus" required="required">
+            <option value=""> ==> Tên Dự Án</option>
+            <option ng-repeat="project in pGroupProject" value="{{project.id}}">{{project.name}}</option>
+        </select><br/>
+        <label>Tài khoản nhân viên</label>
+        <input type="text" style="height: 32px" ng-model="employeeProject.userName" id="employee"
+               placeholder="Tài khoản nhân viên" required="required"><br/>
+        <label>Chức Vụ</label>
+        <select ng-model="employeeProject.position" autofocus="autofocus"
+                required="required">
+            <option value="">==> Chức Vụ</option>
+            <option value="TeamLead">TeamLead</option>
+            <option value="Member">Member</option>
+        </select><br/>
+        <h1>{{view.message}}</h1>
+        <div>
+            <input type="submit" value="Lưu">
+            <input type="reset" value="Reset">
+            <button type="button" ui-sref="project">Back</button>
+        </div>
+    </form>
+</div>
